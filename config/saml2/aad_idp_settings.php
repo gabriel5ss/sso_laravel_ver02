@@ -85,7 +85,43 @@ return $settings = array(
         // 'certFingerprint' => '',
     ),
 
-
+    // 'idp' => array(
+    //     // Identifier of the IdP entity  (must be a URI)
+    //     //'entityId' => env('SAML2_'.$this_idp_env_id.'_IDP_ENTITYID', $idp_host . '/saml2/idp/metadata.php'),
+    //     'entityId' => 'https://sts.windows.net/62052291-690d-4a16-836e-e9a6e575aede/',
+    //     // SSO endpoint info of the IdP. (Authentication Request protocol)
+    //     'singleSignOnService' => array(
+    //         // URL Target of the IdP where the SP will send the Authentication Request Message,
+    //         // using HTTP-Redirect binding.
+    //         'url' => 'https://login.microsoftonline.com/62052291-690d-4a16-836e-e9a6e575aede/saml2',
+    //     ),
+    //     // SLO endpoint info of the IdP.
+    //     'singleLogoutService' => array(
+    //         // URL Location of the IdP where the SP will send the SLO Request,
+    //         // using HTTP-Redirect binding.
+    //         'url' => 'https://login.microsoftonline.com/62052291-690d-4a16-836e-e9a6e575aede/saml2',
+    //     ),
+    //     // Public x509 certificate of the IdP
+    //     'x509cert' => "MIIC8DCCAdigAwIBAgIQE81SB737mqNDHGV7mWaCEzANBgkqhkiG9w0BAQsFADA0MTIwMAYDVQQD
+    //     EylNaWNyb3NvZnQgQXp1cmUgRmVkZXJhdGVkIFNTTyBDZXJ0aWZpY2F0ZTAeFw0yMjA1MjYxNTM0
+    //     NDlaFw0yNTA1MjYxNTM0NDlaMDQxMjAwBgNVBAMTKU1pY3Jvc29mdCBBenVyZSBGZWRlcmF0ZWQg
+    //     U1NPIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwhmYItzPPuWK
+    //     fi2E4Mfk2P8sd/zSEH6rlH6Y5hMR2PwG96ZNNn/UVYIC1PRPuSHB491m2CJFjvf4A4hOzyOdVfiC
+    //     XcTLeZvlf9dzXxsSsNCeRjQ5pHn6lMBJn3v0MwufpT9PM2ByeL5E37awcTja93K56s6K7bbRZ/3c
+    //     KxyRtHRPQjrJA3wH7Dl90JzcXhuMv3fEJqGatDJiWI7e+qBAt5mgOiP2jd8p6g7lJx44JcjTBTi2
+    //     EXrba38FmrDDPwukBcDb8nnwPjLdenF+Lq26Ye6GoFXNWbcrrZNJV8XD1504nsqIMgeOFEHPwVr8
+    //     DTQ+QtLt76gz5CSYygg+DO0lBQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQAxL028YGmQhrtmK4cH
+    //     /JIRE7iSsrFglBJsGIUpeC5MTAIpZrmBJHNbeUvvaqS30aCO7+foc5rI+Li0dEEEJRtFQgbjD65b
+    //     WKwsuxmvEUOm4vKqYYqt6owmi7CqEuDqG0vo22u8SRI5dnPXIyEmZwEOQnBJuyDL5gZS0OyoNvuI
+    //     /x71yCdFubmCUpw5G4HL2VsCDdh5XGzm4ag1f4IoLsPumSkNkv6+kjsYXkUDDZ4vXwKnypHuz6rd
+    //     wX2ImUQ1fbPv+3ZphpSg8aZ4CLHc4Pt0jvgRqfyQCW8qcARPyqrE07poW3koD9/4pehkr9wOMq5D
+    //     bWtiVZFk5q2u1/Ri+QS8",
+    //     /*
+    //      *  Instead of use the whole x509cert you can use a fingerprint
+    //      *  (openssl x509 -noout -fingerprint -in "idp.crt" to generate it)
+    //      */
+    //     // 'certFingerprint' => '',
+    // ),
 
     /***
      *
