@@ -7,7 +7,7 @@ return $settings = array(
      * Separate routes will be automatically registered for each IDP specified with IDP name as prefix
      * Separate config file saml2/<idpName>_idp_settings.php should be added & configured accordingly
      */
-    'idpNames' => ['test'],
+    'idpNames' => ['aad'],
 
     /**
      * If 'useRoutes' is set to true, the package defines five new routes for reach entry in idpNames:
@@ -25,13 +25,13 @@ return $settings = array(
     /**
      * Optional, leave empty if you want the defined routes to be top level, i.e. "/{idpName}/*"
      */
-    'routesPrefix' => '/saml2',
+    'routesPrefix' => 'saml2',
 
     /**
      * which middleware group to use for the saml routes
      * Laravel 5.2 will need a group which includes StartSession
      */
-    'routesMiddleware' => [],
+    'routesMiddleware' => ['saml'],
 
     /**
      * Indicates how the parameters will be
@@ -42,23 +42,23 @@ return $settings = array(
     /**
      * Where to redirect after logout
      */
-    'logoutRoute' => '/',
+    'logoutRoute' => '/logout',
 
     /**
      * Where to redirect after login if no other option was provided
      */
-    'loginRoute' => '/',
+    'loginRoute' => '/dashboard',
 
     /**
      * Where to redirect after login if no other option was provided
      */
-    'errorRoute' => '/',
+    'errorRoute' => '/login',
 
     // If 'proxyVars' is True, then the Saml lib will trust proxy headers
     // e.g X-Forwarded-Proto / HTTP_X_FORWARDED_PROTO. This is useful if
     // your application is running behind a load balancer which terminates
     // SSL.
-    'proxyVars' => false,
+    'proxyVars' => true,
 
     /**
      * (Optional) Which class implements the route functions.
@@ -67,5 +67,5 @@ return $settings = array(
      * a `$returnTo` argument), this value allows you to pass your own controller, and have
      * it used in the routes definition.
      */
-     // 'saml2_controller' => '',
+    'saml2_controller' => 'App\Http\Controllers\Auth\SAML2LoginController',
 );
