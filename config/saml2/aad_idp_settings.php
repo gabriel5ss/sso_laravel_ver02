@@ -6,7 +6,7 @@ $this_idp_env_id = 'AAD';
 
 //This is variable is for simplesaml example only.
 // For real IdP, you must set the url values in the 'idp' config to conform to the IdP's real urls.
-$idp_host = env('SAML2_'.$this_idp_env_id.'_IDP_HOST', 'http://localhost:8000/simplesaml');
+$idp_host = env('SAML2_'.$this_idp_env_id.'_IDP_HOST', 'http://localhost:8000/');
 
 return $settings = array(
 
@@ -63,6 +63,7 @@ return $settings = array(
     'idp' => array(
         // Identifier of the IdP entity  (must be a URI)
         'entityId' => env('SAML2_'.$this_idp_env_id.'_IDP_ENTITYID', $idp_host . '/saml2/idp/metadata.php'),
+        //'entityId' => env('SAML2_'.$this_idp_env_id.'_IDP_ENTITYID', $idp_host . "/sso_example.xml"),
         // SSO endpoint info of the IdP. (Authentication Request protocol)
         'singleSignOnService' => array(
             // URL Target of the IdP where the SP will send the Authentication Request Message,
